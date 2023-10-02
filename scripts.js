@@ -4,7 +4,7 @@ const error = document.querySelector(".error");
 
 function validate() {
   if (
-    password.textContent === confirmPassword.textContent &&
+    password.value === confirmPassword.value &&
     password.value.length > 0 &&
     confirmPassword.value.length > 0
   ) {
