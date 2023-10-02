@@ -12,7 +12,7 @@ body {
   width: 30vw;
 }
 
-.img-div > .blur {
+.blur {
   backdrop-filter: blur(10px);
   background-color: rgba(92, 65, 108, 0.3);
   height: 140px;
@@ -21,7 +21,7 @@ body {
   width: 100%;
 }
 
-.img-div > .blur > p {
+.blur p {
   color: #efa3cc;
   font-size: 2.5rem;
   font-weight: 700;
@@ -29,7 +29,7 @@ body {
   text-align: center;
 }
 
-.img-div > img {
+.img-div img {
   min-height: 100%;
   object-fit: cover;
   width: 100%;
@@ -49,13 +49,13 @@ body {
   max-width: 60vw;
 }
 
-.content > p {
+.content p {
   color: #5c416c;
   font-size: 1.5rem;
   letter-spacing: 2px;
 }
 
-.content > p:first-child {
+.content p:first-child {
   margin-top: 30px;
 }
 
@@ -70,7 +70,7 @@ body {
   width: 70vw;
 }
 
-.sign-up > p {
+.sign-up p {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 9px;
@@ -80,25 +80,27 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
 }
 
-form > .section {
+form input,
+form label {
+  margin-left: 20px;
+}
+.section {
   display: flex;
   gap: 25px;
 }
 
-form > .section:first-child,
-form > .section:nth-child(2) {
+.section {
   margin: 0 0 25px;
 }
 
-form > .section > div {
+.section div {
   display: flex;
   flex-direction: column;
 }
 
-form > .section > div > input {
+.section div input {
   background-color: #efa3cc;
   border: 2px solid #c9719b;
   border-radius: 3px;
@@ -106,34 +108,55 @@ form > .section > div > input {
   width: 25vw;
 }
 
-form > .section > div > label {
+.section div label {
   font-size: 1rem;
   text-transform: uppercase;
 }
 
-.pt-3 > button {
+.section div input {
+  color: #5c416c;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.pt-3 button {
   background-color: #5c416c;
   border-radius: 5px;
   border-style: none;
   box-shadow: 0 15px 15px rgba(157, 54, 110, 0.6);
   color: #e793a7;
-  margin: 50px 0 20px 20px;
+  margin: 50px 0 0 20px;
   padding: 20px 13px;
   text-transform: uppercase;
 }
 
-.pt-3 > p {
+.pt-3 p {
   color: #ffe0f1;
   letter-spacing: 4px;
   margin-left: 20px;
 }
 
-.pt-3 > p > a:link,
-.pt-3 > p > a:visited {
+.pt-3 p a:link,
+.pt-3 p a:visited {
   color: #5c416c;
   font-weight: 700;
 }
 
-.pt-3 > button:active {
+.pt-3 button:active {
   transform: translateY(-1px);
+}
+
+input:focus:invalid {
+  background-color: lightcoral;
+}
+
+input:focus:valid {
+  background-color: rgb(132, 234, 217);
+}
+
+.error {
+  font-size: 1rem;
+  font-family: inherit;
+  color: #efa3cc;
+  margin: 10px 0 0 20px;
 }
